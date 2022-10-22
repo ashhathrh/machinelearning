@@ -54,7 +54,8 @@ b=classification_report(ytest, y_model)
 st.write(b)
 
 from sklearn.metrics import confusion_matrix 
-confusion_matrix(ytest, y_model)
+c=confusion_matrix(ytest, y_model)
+st.write(c)
 
 import matplotlib.pyplot as plt
 from sklearn import metrics
