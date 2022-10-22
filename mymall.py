@@ -22,7 +22,7 @@ st.write(pd.DataFrame({
 
 mc = pd.read_csv('mall_customer.csv')
 
-mc.head()
+st.write(mc.head())
 
 mc.tail()
 
