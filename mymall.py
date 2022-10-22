@@ -50,7 +50,8 @@ a=accuracy_score(ytest, y_model)
 st.write(a)
 
 from sklearn.metrics import classification_report
-st.write(classification_report(ytest, y_model))
+b=classification_report(ytest, y_model)
+st.write(b)
 
 from sklearn.metrics import confusion_matrix 
 confusion_matrix(ytest, y_model)
