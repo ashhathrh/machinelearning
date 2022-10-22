@@ -11,7 +11,8 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import seaborn as sns
-import matplotlib.pyplot as 
+import sklearn as sk
+import matplotlib.pyplot as plt
 
 st.header("My Second Streamlit App")
 st.write(pd.DataFrame({
