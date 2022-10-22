@@ -7,9 +7,18 @@ Original file is located at
     https://colab.research.google.com/drive/1TMxbtqifFpDRAN6xWvA8KOgTUG-jwITS
 """
 
-import seaborn as sns
+import streamlit as st
+import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+import seaborn as sns
+import matplotlib.pyplot as 
+
+st.header("My Second Streamlit App")
+st.write(pd.DataFrame({
+    'Intplan': ['yes', 'yes', 'yes', 'no'],
+    'Churn Status': [0, 0, 0, 1]
+}))
+
 mc = pd.read_csv('/content/mall_customer.csv')
 
 mc.head()
