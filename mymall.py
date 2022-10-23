@@ -63,11 +63,9 @@ import numpy as np
 confusion_matrix = metrics.confusion_matrix(ytest, y_model)
 
 st.write(confusion_matrix)
-
-cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix,display_labels=np.unique(y_mc))
-
-cm_display.plot()
-plt.show()
+fig=plt.figure(figsize=(10,4))
+sns.heatmap(confusion_matrix,annot=True)
+st.pyplot(fig)
 
 from sklearn.metrics import classification_report
 st.write(classification_report(ytest, y_model))
