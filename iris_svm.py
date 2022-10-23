@@ -1,7 +1,7 @@
+import streamlit as st
 import seaborn as sns
 import pandas as pd
 import numpy as np
-import streamlit as st
 
 from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
@@ -35,7 +35,6 @@ matrix = plot_confusion_matrix(svm, xtest, ytest, cmap=plt.cm.Blues, normalize='
 plt.title('Confusion matrix for linear SVM')
 plt.show(matrix)
 plt.show()
-
 
 
 from sklearn.metrics import classification_report
