@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import plot_confusion_matrix
+from sklearn.metrics import classification_report
 
 iris = sns.load_dataset('iris') 
 xiris = iris.drop('species', axis=1)  
