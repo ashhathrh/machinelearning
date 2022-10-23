@@ -1,7 +1,7 @@
 import seaborn as sns
+import streamlit as st
+import pandas as pd
 
-import pandas as pd
-import pandas as pd
 from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
 iris = sns.load_dataset('iris') # returns a pandas dataframe
