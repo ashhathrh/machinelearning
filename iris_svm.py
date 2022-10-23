@@ -19,8 +19,16 @@ st.write('Accuracy of RBF SVC classifier on training set: {:.2f}'
 st.write('Accuracy of RBF SVC classifier on test set: {:.2f}'
      .format(clf.score(xtest, ytest)))
 
+#classification report
+model = SVC()                       
+model.fit(xtrain, ytrain)                  
+y_model = model.predict(xtest)  
+
+st.write(classification_report(ytest, y_model))
+
 # Confusion Matrix
-confusion_matrix(ytest, y_model)
+cm=confusion_matrix(ytest, y_model)
+st.wrtie(cm)
 
 svm = SVC(random_state=42, kernel='linear')
 
@@ -34,10 +42,4 @@ plt.show(matrix)
 plt.show()
 
 
-from sklearn.metrics import classification_report
-from sklearn.svm import SVC
-model = SVC()                       
-model.fit(xtrain, ytrain)                  
-y_model = model.predict(xtest)  
 
-print(classification_report(ytest, y_model))
