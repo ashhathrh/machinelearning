@@ -8,12 +8,15 @@ iris = sns.load_dataset('iris') # returns a pandas dataframe
 
 xiris = iris.drop('species', axis=1)  
 yiris = iris['species']
+
 xtrain, xtest, ytrain, ytest = train_test_split(xiris, yiris,random_state=1)
+
 clf = tree.DecisionTreeClassifier()
 clf = clf.fit(xtrain, ytrain)
+st.write(clf)
 
 
-clf.fit(xtrain, ytrain)
+
 
 tree.plot_tree(clf.fit(xtrain, ytrain) )
 
