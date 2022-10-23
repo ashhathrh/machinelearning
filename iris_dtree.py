@@ -12,7 +12,7 @@ yiris = iris['species']
 xtrain, xtest, ytrain, ytest = train_test_split(xiris, yiris,random_state=1)
 
 from sklearn.tree import DecisionTreeClassifier
-clf = tree.DecisionTreeClassifier()
+clf = DecisionTreeClassifier()
 clf = clf.fit(xtrain, ytrain)
 
 
