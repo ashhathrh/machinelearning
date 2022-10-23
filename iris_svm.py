@@ -30,20 +30,16 @@ y_model = model.predict(xtest)
 cr=classification_report(ytest, y_model)
 st.write(cr)
 
-# Confusion Matrix
-cm=confusion_matrix(ytest, y_model)
-st.wrtie(cm)
+confusion_matrix(yest,y_model)
 
-svm = SVC(random_state=42, kernel='linear')
-
-# Fit the data to the SVM classifier
-svm = svm.fit(xtrain, ytrain)
-
-# Evaluate by means of a confusion matrix
-matrix = plot_confusion_matrix(svm, xtest, ytest, cmap=plt.cm.Blues, normalize='true')
+#confusion matrix
+confusion_matrix=metrics.confusion_matrix(ytest,y_model)
+c=confusion_matrix
+st.write("confusion matrix:",c)
 fig=plt.figure(figsize=(10,4))
 sns.heatmap(confusion_matrix,annot=True)
 st.pyplot(fig)
+
 
 
 
