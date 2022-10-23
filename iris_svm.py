@@ -24,7 +24,8 @@ model = SVC()
 model.fit(xtrain, ytrain)                  
 y_model = model.predict(xtest)  
 
-st.write(classification_report(ytest, y_model))
+cr=classification_report(ytest, y_model)
+st.write(cr)
 
 # Confusion Matrix
 cm=confusion_matrix(ytest, y_model)
