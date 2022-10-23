@@ -27,6 +27,10 @@ model = SVC()
 model.fit(xtrain, ytrain)                  
 y_model = model.predict(xtest)  
 
+from sklearn.metrics import accuracy_score
+a = accuracy_score(ytest, y_model) 
+st.write("Accuracy score:", a)
+
 cr=classification_report(ytest, y_model)
 st.write(cr)
 
