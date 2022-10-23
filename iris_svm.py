@@ -1,10 +1,10 @@
 import streamlit as st
 import seaborn as sns
 import pandas as pd
-import numpy as np
 
 from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import plot_confusion_matrix
 
 iris = sns.load_dataset('iris') 
 xiris = iris.drop('species', axis=1)  
@@ -13,18 +13,15 @@ yiris = iris['species']
 xtrain, xtest, ytrain,ytest = train_test_split(xiris, yiris, random_state = 0)
 
 clf = SVC(kernel='rbf', C=1).fit(xtrain, ytrain)
-print('Iris dataset')
-print('Accuracy of RBF SVC classifier on training set: {:.2f}'
+st.write('Iris dataset')
+st.write('Accuracy of RBF SVC classifier on training set: {:.2f}'
      .format(clf.score(xtrain, ytrain)))
-print('Accuracy of RBF SVC classifier on test set: {:.2f}'
+st.write('Accuracy of RBF SVC classifier on test set: {:.2f}'
      .format(clf.score(xtest, ytest)))
 
 # Confusion Matrix
-from sklearn.metrics import confusion_matrix 
 confusion_matrix(ytest, y_model)
 
-from sklearn.metrics import plot_confusion_matrix
-from sklearn.svm import SVC
 svm = SVC(random_state=42, kernel='linear')
 
 # Fit the data to the SVM classifier
