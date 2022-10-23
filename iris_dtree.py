@@ -18,8 +18,6 @@ clf = tree.DecisionTreeClassifier()
 clf = clf.fit(xtrain, ytrain)
 
 
-clf.fit(xtrain, ytrain)
-
 tree.plot_tree(clf.fit(xtrain, ytrain) )
 
 clf.score(xtest, ytest)
