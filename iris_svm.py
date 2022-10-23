@@ -1,6 +1,9 @@
 import streamlit as st
-import seaborn as sns
+import numpy as np
 import pandas as pd
+import seaborn as sns
+import sklearn as sk
+import matplotlib.pyplot as plt
 
 from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
