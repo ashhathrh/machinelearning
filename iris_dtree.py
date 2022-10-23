@@ -6,8 +6,8 @@ from sklearn.model_selection import train_test_split
 
 iris = sns.load_dataset('iris')
 
-X_iris = iris.drop('species', axis=1)  
-y_iris = iris['species']
+xiris = iris.drop('species', axis=1)  
+yiris = iris['species']
 
 xtrain, xtest, ytrain, ytest = train_test_split(xiris, yiris,random_state=1)
 
