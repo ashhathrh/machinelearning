@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
-from sklearn.cluster import KMeans
 import streamlit as st
+from sklearn.cluster import KMeans
 
 file = "mall_customer.csv"
 df= pd.read_csv(file)
@@ -16,7 +16,7 @@ st.write(a)
 
 b=plt.scatter(X['Annual_Income_(k$)'], X['Spending_Score']);
 fig=plt.figure(figsize=(10,4))
-sns.heatmap(b,annot=True)
+plt.scatter(b,annot=True)
 st.pyplot(fig)
 
 
@@ -31,5 +31,5 @@ centers
 plt.scatter(centers[:, 0], centers[:, 1], c='black', s=200, alpha=0.5);
 
 fig=plt.figure(figsize=(10,4))
-sns.heatmap(centers,annot=True)
+plt.scatter(centers,annot=True)
 st.pyplot(fig)
