@@ -1,29 +1,25 @@
+import streamlit as st 
+import pandas as pd
 import seaborn as sns
 import pandas as pd
-import pandas as pd
+import numpy as np 
 import matplotlib.pyplot as plt
-from sklearn.svm import SVC
+from sklearn.datasets import load_iris
+from sklearn import tree
+from sklearn.tree import plot_tree
 from sklearn.model_selection import train_test_split
-
-
 iris = sns.load_dataset('iris')
 
-xiris = iris.drop('species', axis=1)  
-yiris = iris['species']
+X_iris = iris.drop('species', axis=1)  
+y_iris = iris['species']
 
-xtrain, xtest, ytrain, ytest = train_test_split(xiris, yiris,random_state=1)
-
-from sklearn.tree import DecisionTreeClassifier
+Xtrain, Xtest, ytrain, ytest = train_test_split(X_iris, y_iris,random_state=1)
 clf = tree.DecisionTreeClassifier()
-clf = clf.fit(xtrain, ytrain)
+clf = clf.fit(Xtrain, ytrain)
 
-
-
-
-clf.score(xtest, ytest)
 
 fig = plt.figure(figsize=(10, 4))
-clf.fit(xtrain, ytrain)
-tree.plot_tree(clf.fit(xtrain, ytrain))
+clf.fit(Xtrain, ytrain) 
+tree.plot_tree(clf.fit(Xtrain, ytrain) )
 st.pyplot(fig)
-clf.score(xtest, ytest)
+clf.score(Xtest, ytest)
