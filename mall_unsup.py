@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 from sklearn.cluster import KMeans
+import streamlit as st
 
 file = "mall_customer.csv"
 df= pd.read_csv(file)
@@ -10,10 +11,14 @@ df= pd.read_csv(file)
 features = ['Annual_Income_(k$)', 'Spending_Score']
 X = df[features]
 
-X.head()
+a=X.head()
+st.write(a)
 
+b=plt.scatter(X['Annual_Income_(k$)'], X['Spending_Score']);
+fig=plt.figure(figsize=(10,4))
+sns.heatmap(b,annot=True)
+st.pyplot(fig)
 
-plt.scatter(X['Annual_Income_(k$)'], X['Spending_Score']);
 
 kmeans = KMeans(n_clusters=4)
 kmeans.fit(X)
