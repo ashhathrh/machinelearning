@@ -12,12 +12,12 @@ features = ['Annual_Income_(k$)', 'Spending_Score']
 X = df[features]
 
 a=X.head()
-st.write("  KMeans Clustering for Iris")
+st.write("  KMeans Clustering for Mall Customers")
 st.write(a)
 
 st.write("  Scatter plot for annual income and spending score dataset")
 fig=plt.figure(figsize=(10,4))
-plt.scatter(X['Annual_Income_(k$)'], X['Spending_Score'], c='salmon');
+plt.scatter(X['Annual_Income_(k$)'], X['Spending_Score'], c='red');
 st.pyplot(fig)
 
 
