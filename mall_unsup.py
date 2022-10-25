@@ -27,8 +27,7 @@ plt.scatter(X['Annual_Income_(k$)'], X['Spending_Score'], c=y_kmeans, s=50, cmap
 
 centers = kmeans.cluster_centers_
 centers
-plt.scatter(centers[:, 0], centers[:, 1], c='black', s=200, alpha=0.5);
 
 fig=plt.figure(figsize=(10,4))
-plt.scatter(centers,annot=True)
+plt.scatter(centers[:, 0], centers[:, 1], c='black', s=200, alpha=0.5);
 st.pyplot(fig)
