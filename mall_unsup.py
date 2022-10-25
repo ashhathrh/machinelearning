@@ -12,8 +12,10 @@ features = ['Annual_Income_(k$)', 'Spending_Score']
 X = df[features]
 
 a=X.head()
+st.write("  KMeans Clustering for Iris")
 st.write(a)
 
+st.write("  Scatter plot for annual income and spending score dataset")
 fig=plt.figure(figsize=(10,4))
 plt.scatter(X['Annual_Income_(k$)'], X['Spending_Score'], c='salmon');
 st.pyplot(fig)
@@ -23,9 +25,11 @@ kmeans = KMeans(n_clusters=4)
 kmeans.fit(X)
 y_kmeans = kmeans.predict(X)
 
+st.write("  Scatter plot with colours for annual income and spending score dataset")
 
 centers = kmeans.cluster_centers_
 centers
+
 
 fig=plt.figure(figsize=(10,4))
 plt.scatter(X['Annual_Income_(k$)'], X['Spending_Score'], c=y_kmeans, s=50, cmap='viridis')
