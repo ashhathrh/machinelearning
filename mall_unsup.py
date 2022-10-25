@@ -10,8 +10,8 @@ df= pd.read_csv(file)
 features = ['Annual_Income_(k$)', 'Spending_Score']
 X = df[features]
 
-a=X.head()
-st.write(a)
+X.head()
+
 
 plt.scatter(X['Annual_Income_(k$)'], X['Spending_Score']);
 
