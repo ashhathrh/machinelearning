@@ -14,9 +14,8 @@ X = df[features]
 a=X.head()
 st.write(a)
 
-b=plt.scatter(X['Annual_Income_(k$)'], X['Spending_Score']);
 fig=plt.figure(figsize=(10,4))
-plt.scatter(b,annot=True)
+plt.scatter(X['Annual_Income_(k$)'], X['Spending_Score'], c='salmon');
 st.pyplot(fig)
 
 
