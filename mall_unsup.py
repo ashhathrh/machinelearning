@@ -25,5 +25,5 @@ centers
 plt.scatter(centers[:, 0], centers[:, 1], c='black', s=200, alpha=0.5);
 
 fig=plt.figure(figsize=(10,4))
-sns.heatmap(confusion_matrix,annot=True)
+sns.heatmap(centers,annot=True)
 st.pyplot(fig)
